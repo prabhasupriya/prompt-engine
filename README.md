@@ -1,6 +1,6 @@
 # Prompt Engine – Reusable Prompt Management Framework for LLMs
 
-##  Project Overview
+ Project Overview
 
 **Prompt Engine** is a reusable Python library designed for creating, managing, validating, and rendering dynamic Large Language Model (LLM) prompts using external templates. It enables consistent prompt usage, easy experimentation, and scalable AI application development without modifying application code.
 
@@ -8,33 +8,32 @@ This project demonstrates how foundational AI tooling can be built from scratch 
 
 
 
-##  Project Architecture
+ Project Architecture
 
 
 prompt-engine/
+├── prompt_engine/ # Core Python package
+│ ├── init.py
+│ ├── engine.py # PromptEngine (loading, rendering, chaining)
+│ ├── models.py # Pydantic template schema
+│ ├── exceptions.py # Custom error classes
 │
-├── prompt_engine/            # Core Python package
-│   ├── __init__.py
-│   ├── engine.py             # PromptEngine (loading, rendering, chaining)
-│   ├── models.py             # Pydantic template schema
-│   ├── exceptions.py         # Custom error classes
+├── templates/ # Prompt templates (YAML)
+│ ├── zero_shot_qa.yaml
+│ ├── zero_shot_summarize.yaml
+│ ├── few_shot_sentiment.yaml
+│ ├── few_shot_math.yaml
+│ ├── cot_reasoning.yaml
+│ ├── cot_debugging.yaml
+│ ├── role_python_expert.yaml
+│ ├── role_career_mentor.yaml
+│ ├── structured_json.yaml
+│ └── structured_table.yaml
 │
-├── templates/                # Prompt templates (YAML)
-│   ├── zero_shot_qa.yaml
-│   ├── zero_shot_summarize.yaml
-│   ├── few_shot_sentiment.yaml
-│   ├── few_shot_math.yaml
-│   ├── cot_reasoning.yaml
-│   ├── cot_debugging.yaml
-│   ├── role_python_expert.yaml
-│   ├── role_career_mentor.yaml
-│   ├── structured_json.yaml
-│   ├── structured_table.yaml
-│
-├── examples.py               # Usage demonstrations
-├── pyproject.toml            # Package configuration
-├── requirements.txt          # Dependencies
-└── README.md                 # Documentation
+├── examples.py # Usage demonstrations
+├── pyproject.toml # Package configuration
+├── requirements.txt # Dependencies
+└── README.md # Documentation
 ```
 
 
@@ -56,7 +55,7 @@ template: |
   Prompt text using {{ variable1 }}
 ```
 
-### Optional Field (Few-Shot Only)
+ Optional Field (Few-Shot Only)
 
 ```yaml
 examples:
@@ -66,7 +65,7 @@ examples:
 
 
 
-##  Supported Prompt Patterns
+ Supported Prompt Patterns
 
 The framework supports **five advanced prompt engineering patterns**, with **two templates for each pattern** (10 total):
 
@@ -90,9 +89,9 @@ Prompts that assign a specific persona or role to the LLM (e.g., expert, mentor)
 
 Prompts that instruct the model to respond in a strict format such as JSON or tables.
 
----
 
-##  Prompt Chaining
+
+  Prompt Chaining
 
 Prompt chaining allows the output of one rendered prompt to be used as the input for another prompt.
 
@@ -114,9 +113,9 @@ This demonstrates how prompts can be composed into multi-step workflows.
 
 
 
-##  Installation
+  Installation
 
-### Clone the Repository
+ Clone the Repository
 
 ```bash
 git clone https://github.com/<your-username>/prompt-engine.git
@@ -140,7 +139,7 @@ pip install .
 
 
 
-## ▶ Usage
+ Usage
 
 ### Initialize the Prompt Engine
 
@@ -175,11 +174,11 @@ The example script demonstrates:
 
 
 
-##  Error Handling & Validation
+ Error Handling & Validation
 
 The engine validates all required input variables before rendering.
 
-### Example Error
+Example Error
 
 ```text
 Missing required variable "text" for template "structured_json"
@@ -189,19 +188,25 @@ This ensures prompt integrity and makes debugging easy.
 
 ---
 
-##  Evaluation Checklist Compliance
+ Evaluation Checklist Compliance
 
-✔ Standard Python package structure (`pyproject.toml`)
-✔ 10 YAML templates covering all required patterns
-✔ Pydantic-based schema validation
-✔ Jinja2-based rendering engine
-✔ Prompt chaining support
-✔ Clear and informative error messages
-✔ Comprehensive examples demonstrating all features
+Standard Python package structure (`pyproject.toml`)
+
+10 YAML templates covering all required patterns
+
+Pydantic-based schema validation
+ 
+Jinja2-based rendering engine
+ 
+Prompt chaining support
+
+Clear and informative error messages
+
+Comprehensive examples demonstrating all features
 
 
 
-##  Conclusion
+  Conclusion
 
 This project demonstrates how a robust, extensible prompt management framework can be built using Python. The design emphasizes clarity, validation, reusability, and scalability—key qualities required for production-grade AI systems.
 
