@@ -8,7 +8,7 @@ This project demonstrates how foundational AI tooling can be built from scratch 
 
 
 
- Project Architecture
+### Project Architecture
 
 
 prompt-engine/
@@ -42,7 +42,7 @@ prompt-engine/
 
 Each prompt template is defined using **YAML** and validated using **Pydantic**. The schema ensures consistency and prevents runtime errors.
 
-### Required Fields
+###  Required Fields
 
 ```yaml
 name: unique_template_name
@@ -55,7 +55,7 @@ template: |
   Prompt text using {{ variable1 }}
 ```
 
- Optional Field (Few-Shot Only)
+### Optional Field (Few-Shot Only)
 
 ```yaml
 examples:
@@ -65,7 +65,7 @@ examples:
 
 
 
- Supported Prompt Patterns
+ ### Supported Prompt Patterns
 
 The framework supports **five advanced prompt engineering patterns**, with **two templates for each pattern** (10 total):
 
@@ -91,7 +91,7 @@ Prompts that instruct the model to respond in a strict format such as JSON or ta
 
 
 
-  Prompt Chaining
+ ### Prompt Chaining
 
 Prompt chaining allows the output of one rendered prompt to be used as the input for another prompt.
 
@@ -113,9 +113,9 @@ This demonstrates how prompts can be composed into multi-step workflows.
 
 
 
-  Installation
+###  Installation
 
- Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/<your-username>/prompt-engine.git
@@ -174,7 +174,7 @@ The example script demonstrates:
 
 
 
- Error Handling & Validation
+### Error Handling & Validation
 
 The engine validates all required input variables before rendering.
 
@@ -188,7 +188,7 @@ This ensures prompt integrity and makes debugging easy.
 
 ---
 
- Evaluation Checklist Compliance
+### Evaluation Checklist Compliance
 
 Standard Python package structure (`pyproject.toml`)
 
@@ -206,7 +206,7 @@ Comprehensive examples demonstrating all features
 
 
 
-  Conclusion
+###  Conclusion
 
 This project demonstrates how a robust, extensible prompt management framework can be built using Python. The design emphasizes clarity, validation, reusability, and scalability—key qualities required for production-grade AI systems.
 
