@@ -1,0 +1,15 @@
+name: few_shot_sentiment
+description: Classify sentiment using examples
+pattern: few-shot
+input_variables:
+  - text
+examples:
+  - input: "I love this product"
+    output: "Positive"
+  - input: "This is the worst service ever"
+    output: "Negative"
+template: |
+  Classify the sentiment of the following text.
+
+  Text: {{ text }}
+  Sentiment:

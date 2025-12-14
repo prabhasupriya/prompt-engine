@@ -1,0 +1,11 @@
+name: cot_reasoning
+description: Encourage step-by-step logical reasoning
+pattern: cot
+input_variables:
+  - problem
+template: |
+  Solve the following problem by reasoning step by step before giving the final answer.
+
+  Problem: {{ problem }}
+
+  Let's think step by step.

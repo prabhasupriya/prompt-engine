@@ -1,0 +1,5 @@
+[project]
+name = "prompt-engine"
+version = "0.1.0"
+description = "Reusable prompt management system for LLMs"
+dependencies = ["pydantic", "jinja2", "pyyaml"]

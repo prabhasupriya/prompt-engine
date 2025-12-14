@@ -1,0 +1,12 @@
+name: cot_debugging
+description: Debug code using step-by-step reasoning
+pattern: cot
+input_variables:
+  - code
+template: |
+  Analyze the following code carefully and identify the issue step by step.
+
+  Code:
+  {{ code }}
+
+  Explain your reasoning before giving the solution.

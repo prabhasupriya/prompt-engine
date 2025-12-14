@@ -1,0 +1,13 @@
+name: structured_table
+description: Return information in a structured table format
+pattern: structured
+input_variables:
+  - topic
+template: |
+  Provide information about the following topic in a table format.
+
+  Topic: {{ topic }}
+
+  Table format:
+  | Aspect | Description |
+  |--------|-------------|

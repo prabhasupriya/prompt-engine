@@ -1,0 +1,9 @@
+name: zero_shot_summarize
+description: Summarize a given text without examples
+pattern: zero-shot
+input_variables:
+  - text
+template: |
+  Provide a concise summary of the following text.
+
+  Text: {{ text }}

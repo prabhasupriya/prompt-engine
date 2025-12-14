@@ -1,0 +1,15 @@
+name: structured_json
+description: Return output strictly in JSON format
+pattern: structured
+input_variables:
+  - text
+template: |
+  Analyze the following text and respond ONLY in valid JSON.
+
+  Required JSON format:
+  {
+    "summary": "short summary",
+    "keywords": ["keyword1", "keyword2", "keyword3"]
+  }
+
+  Text: {{ text }}

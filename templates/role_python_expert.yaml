@@ -1,0 +1,11 @@
+name: role_python_expert
+description: Assign the role of a Python expert
+pattern: role-based
+input_variables:
+  - task
+template: |
+  You are an expert Python developer with years of experience.
+
+  Task: {{ task }}
+
+  Provide a professional and optimized solution.

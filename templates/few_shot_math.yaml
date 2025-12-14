@@ -1,0 +1,15 @@
+name: few_shot_math
+description: Solve arithmetic problems using examples
+pattern: few-shot
+input_variables:
+  - problem
+examples:
+  - input: "2 + 3"
+    output: "5"
+  - input: "10 - 4"
+    output: "6"
+template: |
+  Solve the following math problem.
+
+  Problem: {{ problem }}
+  Answer:
